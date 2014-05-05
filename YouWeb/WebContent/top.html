@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>无标题文档</title>
+	<style type="text/css">
+	body{ margin:0px; padding:0px }
+	</style>
+</head>
+<style>
+#time
+{
+	width:250px;
+	height:18px;
+	margin-top:-18px;
+	margin-left:1000px;
+	font-size:13px;
+}
+
+#shipinjiankong
+{
+	width:250px;
+	height:18px;
+	margin-top:-20px;
+	margin-left:250px;
+	font-size:15px;
+	text-decoration:none; 
+	color:#033d61;
+}
+
+#monidapeng
+{
+	width:250px;
+	height:18px;
+	margin-top:-18px;
+	margin-left:350px;
+	font-size:15px;
+	text-decoration:none; 
+	color:#033d61;
+}
+
+#lishishuju
+{
+	width:250px;
+	height:18px;
+	margin-top:-23px;
+	margin-left:450px;
+	font-size:15px;
+	text-decoration:none; 
+	color:#033d61;
+}
+#chaxun
+{
+	width:250px;
+	height:18px;
+	margin-top:-14px;
+	margin-left:720px;
+	font-size:15px;
+	text-decoration:none; 
+	color:#033d61;
+}
+
+#exit
+{
+	width:250px;
+	height:18px;
+	margin-top:-17px;
+	margin-left:1250px;
+	font-size:13px;
+	text-decoration:none; 
+	color:#033d61;
+}
+#exit:hover
+{
+	text-decoration:underline; 
+	font-size:14px
+}
+</style>
+
+<body bgcolor="#CC0000">
+
+<div style="width:1356px ; height:97px">
+<div style="width:1356px ; height:97px"><img src="image/head.jpg" width="1365px" height="97px"/></div>
+	<div id="shipinjiankong">
+		<a href="http://192.168.1.111:81" target="centerframe">视频监控</a>
+	</div>
+	<div id="monidapeng">
+		<a href="dapeng.jsp" target="centerframe">模拟大棚</a>
+	</div>
+	<div id="lishishuju">
+		历史数据:
+		<select name="time1" id="time1" >    
+		 	<option value="1">5-23</option>    
+		 	<option value="2">5-24</option>   
+		 	<option value="3">5-25</option>  
+		  	<option value="4">5-26</option> 
+		    <option value="5">5-27</option>  
+		</select> --
+		<select name="time2" id="time2" >    
+		 	<option value="1">7-1</option>    
+		</select>
+		
+	</div>
+	<div id="chaxun">
+		<a href="#" target="centerframe">查询</a>
+	</div>
+	<div id="time" >
+		<script >
+			setInterval("time.innerHTML=new Date().toLocaleString()+'   星期'+'日一二三四五六'.charAt(new Date().getDay());", 1000);
+		</script>
+	</div>
+	<div id="exit">
+		<a href="#">退出系统</a>
+	</div>
+</div>
+
+<!--<script>
+function flush(){
+	window.parent.frames["centerframe"].location.reload(); 
+}
+setInterval("flush()","700");
+
+</script>-->
+
+</body>
+</html>
